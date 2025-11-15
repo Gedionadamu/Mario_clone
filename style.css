@@ -1,3 +1,147 @@
 body{
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #5c94fc, #87ceeb);
+    font-family: 'courier new', "monospace";
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-container{
+    background: #fff;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px #000;
+}
+.ui{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-style: 18px;
+    font-weight: bold;
+    min-width: 800px;
+}
+#game-area{
+    width: 800px;
+    height: 400px;
+    background: linear-gradient(to bottom,#5c94fc 80%,#228b22 80%,#228b22 100%);
+    border: 2px solid black;
+    overflow: hidden;
+}
+#mario{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://i.imgur.com/Wb1qfhK.png');
+    z-index: 100px;
+}
+#mario.big{
+    width: 40px;
+    height: 40px;
+    background-image: url('https://i.imgur.com/Wb1qfhK.png');
+}
+.platform{
+    height: 20px;
+    width: 20px;
+    background-image:url('https://i.imgur.com/M6rwarW.png');
+}
+.platform.ground{
+    height: 20px;
+    width: 20px;
+    background-image:url('https://i.imgur.com/pogC9x5.png');
+}
+.platform.blue{
+    height: 20px;
+    width: 20px;
+    background-image:url('https://i.imgur.com/fVscIbn,png');
+}
+.enemy{
+    height: 20px;
+    width: 20px;
+    background-image:url('https://i.imgur.com/KPO3fR9.png');
+}
+.enemy.purple{
+    height: 20px;
+    width: 20px;
+    background-image:url('https://i.imgur.com/SvV4ueD.png');
+}
+.coin{
+    height: 20px;
+    width: 20px;
+    background-image:url('https://i.imgur.com/wbKxhcd.png');
+    animation: coinSpin 1s linear infinite;
+}
+@keyframes coinSpin {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.suprise-block{
+    width: 20px;
+    height: 20px;
+    background-image:url('https://i.imgur.com/gesQ1KP.png');
+}
+.suprise-block.hit{
+    width: 20px;
+    height: 20px;
+    background-image:url('https://i.imgur.com/bdrLpi6.png');
+}
+.pipe{
+    width: 20px;
+    height: 20px;
+}
+.pipe-top{
+    width: 20px;
+    height: 20px;
+    background-image:url('https://i.imgur.com/ReTPiWY.png');
+}
+.pipe-top-right{
+    width: 20px;
+    height: 20px;
+    background-image:url('https://i.imgur.com/hj2GK4n.png');
+}
+.pipe-bottom{
+    width: 20px;
+    height: 20px;
+    background-image:url('https://i.imgur.com/c1cYSbt.png');
+}
+.pipe-bottom-right{
+    width: 20px;
+    height: 20px;
+    background-image:url('https://i.imgur.com/nqQ79eI.png');
+}
+
+.controls{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+}
+.game-over{
+    position: absolute;
+    top: 50vh;
+    text-align: center;
+    border: 3px solid white;
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+#restart-button{
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+
+
+}
+#restart-button:hover{
+    background-color: #ff5252;
 }

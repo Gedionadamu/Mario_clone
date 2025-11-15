@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mario</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-</body>
-<script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Simple Mario Game</h1>
+    <div class="game-container">
+      <div class="ui">
+        <div>Score: <span id="score">0</span></div>
+        <div>Levels: <span id="level">0</span></div>
+        <div>Lives: <span id="lives">0</span></div>
+      </div>
+
+      <div id="game-area">
+        <div id="mario"></div>
+      </div>
+      <div class="controls">
+        <p>Controls</p>
+        <p>Arrow Keys: Move Left/Right</p>
+        <p>Down Arrow: Enter pipe(when on top of pipe)</p>
+      </div>
+    </div>
+    <div class="game-over">
+      <h2 id="game-over-title">Game over</h2>
+      <p>Score <span id="final score">0</span></p>
+      <button id="restart-button">Play Again</button>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
